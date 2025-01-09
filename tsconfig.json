@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "WebWorker"],
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    // types
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components": ["./components.ts"]
+    }
+  },
+  "include": ["src", "components.d.ts","shim.d.ts", "env.d.ts", "src/**/*.ts", "src/**/*.vue", "vite-env.d.ts"],
+  "exclude": ["node_modules", "**/*.worker.ts"]
+}
