@@ -6,6 +6,8 @@ import {BootstrapVueNextResolver} from "unplugin-vue-components/resolvers"
 import Components from "unplugin-vue-components/vite"
 import Icons from "unplugin-icons/vite"
 import IconsResolve from "unplugin-icons/resolver"
+import { fileURLToPath, URL } from 'node:url';
+
 // https://vite.dev/config/
 export default defineConfig({
   server: {
@@ -36,8 +38,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // Pastikan path ini sesuai dengan struktur Anda
-      'kitvue': path.resolve(__dirname, './node_modules/kitvue')
+      '@': fileURLToPath(new URL('./', import.meta.url)),
     },
   },
 })

@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import { defineAsyncComponent } from 'vue';
-import {
-  GButton,
-  GInputText,
-} from "./components";
+import { defineAsyncComponent } from 'vue'
+import { GButton, GInputText } from '@/components'
 
 const RemoteComponent = defineAsyncComponent(() => import('remoteApp/RemoteComponent'));
 </script>
@@ -17,6 +14,18 @@ const RemoteComponent = defineAsyncComponent(() => import('remoteApp/RemoteCompo
   <Accordion />
   <HelloWorld msg="Vite + Vue" />
   <GButton />
+  <GButton
+    type="primary"
+    size="xl"
+    label="Button Primary"
+  />
+
+  <GInputText
+    id="iniidnumber"
+    placeholder="Test placeholder!"
+    label="Ini Number Only"
+    type="number"
+  />
   <GInputText>test</GInputText>
 </template>
 
