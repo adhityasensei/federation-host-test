@@ -28,7 +28,6 @@ export default defineConfig({
       shared: ["vue"],
     }),
     Components({
-      resolvers: [BootstrapVueNextResolver(), IconsResolve()],
       dts: true,
     }),
     Icons({

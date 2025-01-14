@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import "kitvue/src/assets/scss/g-kit.scss"
+import './style.css'
 
 createApp(App).mount('#app')
